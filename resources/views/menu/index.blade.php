@@ -48,6 +48,28 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="card mx-auto mt-3" style="width:50rem;">
+                <div class="card-header">
+                    alksdjalsd
+                </div>
+                <div class="card-body">
+                    <label>Pilih Layanan</label>
+                    <select class="form-control">
+                        <option value="ksdfds" class="form-control">asjdhskh</option>
+                    </select><br />
+                    <label>Pilih Tahun</label>
+                    <select class="form-control">
+                        <option value="ksdfds" class="form-control">asjdhskh</option>
+                    </select> <br />
+                    <button class="">Konfirmasi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </main>
 
 @endsection

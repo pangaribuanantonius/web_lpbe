@@ -53,7 +53,7 @@
                             </div>
                             <div class="form-group">
                                 <label>URL</label>
-                                <input type="text" name="url" class="form-control" value="" required><br />
+                                <input type="text" name="url" class="form-control" placeholder="Masukkan Alamat URL jika Ada" value=""><br />
                             </div>
                             <div class="form-group">
                                 <label>Tempat Aplikasi</label>
@@ -132,9 +132,9 @@
                                         <label>Pengguna</label>
                                        <select name="pengguna" id="pengguna" class="form-control" required>
                                             <option value="">-- Pilih --</option>
-                                            <option value="Pemerintah">Pemerintah</option>
-                                            <option value="Aparatur Sipil Negara">Aparatur Sipil Negara</option>
                                             <option value="Masyarakat">Masyarakat</option>
+                                            <option value="ASN">ASN</option>
+                                            <option value="Masyarakat dan ASN">Masyarakat dan ASN</option>
                                             <option value="Lainnya">Lainnya</option>
                                         </select>
                                     </div>
