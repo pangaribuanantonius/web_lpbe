@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 class AplikasiController extends Controller
 {
     public function index($instansi_id){
-        $aplikasi = Aplikasi::Where('instansi_id', $instansi_id)->get();
+        $instansi_id = request('instansi_id');
+        $tahun = request('tahun');
+        $aplikasi = Aplikasi::Where('instansi_id', $instansi_id)->Where('tahun', $tahun)->get();
         return view('aplikasi.index', ['aplikasi' => $aplikasi]);
     }
 
