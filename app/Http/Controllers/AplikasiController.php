@@ -6,11 +6,14 @@ use Illuminate\Http\Request;
 
 class AplikasiController extends Controller
 {
-    public function index($instansi_id){
-        $instansi_id = request('instansi_id');
+    public function index(){
+        $layanan = request('layanan');
         $tahun = request('tahun');
-        $aplikasi = Aplikasi::Where('instansi_id', $instansi_id)->Where('tahun', $tahun)->get();
-        return view('aplikasi.index', ['aplikasi' => $aplikasi]);
+        $instansi_id = \App\Models\User::where('username', session('username'))->first()->instansi_id;
+        if($layanan == 'aplikasi'){
+            $aplikasi = Aplikasi::Where('instansi_id', $instansi_id)->Where('tahun', $tahun)->get();
+            return view('aplikasi.index', ['aplikasi' => $aplikasi]);
+        }
     }
 
     public function create(){

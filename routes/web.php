@@ -45,7 +45,8 @@ Route::post('/aplikasi/store', [AplikasiController::class, 'store'])->name('apli
 
 
 
-Route::get('/{instansi_id}', [AplikasiController::class, 'index'])->name('aplikasi.index');
+Route::get('/layanan/index', [AplikasiController::class, 'index'])->name('layanan.index');
+
 
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

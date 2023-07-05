@@ -14,7 +14,7 @@
                 <div class="card bg-primary text-white mb-4">
                     <div class="card-body">2022</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="{{ url('/HqlyQ4Q4?tahun=2023') }}">View Details</a>
+                        <a class="small text-white stretched-link" href="{{ url('/aplikasi/HqlyQ4Q4?tahun=2023') }}">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -56,23 +56,25 @@
                     <b>Layanan SPBE</b>
                 </div>
                 <div class="card-body">
-                    <label>Pilih Layanan</label>
-                    <select class="form-control">
-                        <option value="" class="form-control"></option>
-                        <option value="Layanan Aplikasi" class="form-control">Layanan Aplikasi</option>
-                        <option value="Layanan Peta Rencana SPBE" class="form-control">Layanan Peta Rencana SPBE</option>
-                        <option value="Layanan Smart City" class="form-control">Layanan Smart City</option>
-                    </select><br />
-                    <label>Pilih Tahun</label>
-                    <select class="form-control">
-                        <option value="" class="form-control"></option>
-                        <option value="2022" class="form-control">2022</option>
-                        <option value="2023" class="form-control">2023</option>
-                        <option value="2024" class="form-control">2024</option>
-                    </select> <br />
-                    <a href="{{ url('/HqlyQ4Q4?tahun=2023') }}">
-                        <button>Konfirmasi</button>
-                    </a>
+                    <form method="get" action="{{ route('layanan.index') }}" enctype="multipart/form-data">
+                        <label>Pilih Layanan</label>
+                        <select name="layanan" class="form-control">
+                            <option value="" class="form-control"></option>
+                            <option value="aplikasi" class="form-control">Layanan Aplikasi</option>
+                            <option value="spbe" class="form-control">Layanan Peta Rencana SPBE</option>
+                            <option value="Layanan Smart City" class="form-control">Layanan Smart City</option>
+                        </select><br />
+                        <label>Pilih Tahun</label>
+                        <select name="tahun" class="form-control">
+                            <option value="" class="form-control"></option>
+                            <option value="2022" class="form-control">2022</option>
+                            <option value="2023" class="form-control">2023</option>
+                            <option value="2024" class="form-control">2024</option>
+                        </select> <br />
+                        <a href="#">
+                            <button>Konfirmasi</button>
+                        </a>
+                    </form>
                 </div>
             </div>
         </div>
