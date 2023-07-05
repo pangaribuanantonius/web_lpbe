@@ -24,6 +24,17 @@
                             </div> -->
                             <input type="hidden" name="instansi_id" class="form-control" value=" {{ \App\Models\User::where('username', session('username'))->first()->instansi_id }}" readonly>
                             <div class="form-group">
+                                <label>Tahun</label>
+                                <select name="tahun" class="form-control">
+                                    <option value="">-- Pilih Tahun --</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                </select><br />
+                            </div>
+                            <div class="form-group">
                                 <label>Nama Unit</label>
                                 <input type="text" name="nama_unit" class="form-control" value="" required><br />
                             </div>
@@ -178,17 +189,6 @@
                                     <div class="form-group">
                                         <label>Kontak</label>
                                         <input type="text" name="kontak" class="form-control" value="" required><br />
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Tahun</label>
-                                        <select name="tahun" class="form-control">
-                                            <option value="">-- Pilih Tahun --</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                            <option value="2025">2025</option>
-                                            <option value="2026">2026</option>
-                                        </select><br />
                                     </div>
                                     <button class="btn btn-success btn-icon-split">
                                         <span class="icon text-white-50">

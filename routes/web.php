@@ -21,20 +21,6 @@ use App\Http\Controllers\LoginController;
     return view('welcome');
 });*/
 
-/*Route::get('/', function () {
-    return view('index');
-});*/
-
-
-Route::get('/{instansi_id}', function () {
-    return view('aplikasi.index');
-});
-
-
-Route::get('/', [LoginController::class, 'login'])->name('login');
-Route::get('/login', [LoginController::class, 'login'])->name('login');
-Route::post('/', [LoginController::class, 'ceklogin'])->name('ceklogin');
-Route::post('/login', [LoginController::class, 'ceklogin'])->name('ceklogin');
 
 
 Route::get('/menu/index', [MenuController::class, 'index'])->name('menu.index')->middleware('auth');
@@ -48,8 +34,11 @@ Route::post('/aplikasi/store', [AplikasiController::class, 'store'])->name('apli
 Route::get('/layanan/index', [AplikasiController::class, 'index'])->name('layanan.index');
 
 
-
+Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/login', [LoginController::class, 'ceklogin'])->name('ceklogin');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/anjeng', [LoginController::class, 'anjeng'])->name('anjeng');
 
 
 

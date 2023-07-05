@@ -1,12 +1,12 @@
 @extends('main')
 @section('layout')
 
-
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Form Input Data</h1>
+        <h1 class="mt-4">Layanan Aplikasi</h1>
         <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item active">Form Input Data</li>
+            <li class="breadcrumb-item active">Home/Layanan Aplikasi</li>
+            <a href="{{ route('aplikasi.create') }}">Tambah Data Baru</a>
         </ol>
 
         <div class="card mb-4">
@@ -18,24 +18,29 @@
                 <table id="datatablesSimple">
                     <thead>
                         <tr>
-                            <th>Nama Instansi</th>
                             <th>Nama Aplikasi</th>
+                            <th>Nama Instansi</th>
                             <th>Tahun</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Nama Instansi</th>
-                            <th>Nama Aplikasi</th>
-                            <th>Tahun</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         @foreach($aplikasi as $aps)
                         <tr>
-                            <td>{{ $aps->aplikasi->nama_instansi }}</td>
                             <td>{{ $aps->nama_aplikasi }}</td>
+                            <td>{{ $aps->aplikasi->nama_instansi }}</td>
                             <td>{{ $aps->tahun }}</td>
+                            <td>
+                                <div class="text-center">
+                                    <a href="#"><i class="fas fa-edit"></i></a>
+                                </div>
+                                <div class="text-center">
+                                    <a href="#"><i class="fas fa-paper-plane text-success"></i></a>
+                                </div>
+                                <div class="text-center">
+                                    <a href="#"><i class="fas fa-trash text-danger"></i></a>
+                                </div>
+                            </td>   
                         </tr>
                         @endforeach
                     </tbody>

@@ -50,6 +50,6 @@ class AplikasiController extends Controller
                 'tahun' => $request->tahun,
             ]);
        
-        return redirect('aplikasi/create');
+        return redirect('layanan/index?layanan=aplikasi&tahun='.request('tahun'));
     }
 }
